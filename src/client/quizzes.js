@@ -5,6 +5,6 @@ export default {
      * Retrives all quizzes
      */
     getAll() {
-        return API.get("?action=quizzes")
+        return API.get("test-quiz.php?action=quizzes")
     }
 }

@@ -7,7 +7,7 @@ export default {
      * @param {array} answers 
      */
     submit(quizId, answers) {
-        let url = `?action=submit&quizId=${quizId}`
+        let url = `test-quiz.php?action=submit&quizId=${quizId}`
 
         url = answers.map(answer => url + `&answers[]=${answer}`)
 

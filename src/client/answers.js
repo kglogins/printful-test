@@ -7,6 +7,6 @@ export default {
      * @param {int} questionId 
      */
     getAll(quizId, questionId) {
-        return API.get(`?action=answers&quizId=${quizId}&questionId=${questionId}`)
+        return API.get(`test-quiz.php?action=answers&quizId=${quizId}&questionId=${questionId}`)
     }
 }

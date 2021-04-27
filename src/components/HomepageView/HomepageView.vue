@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-xl p-6 mx-auto">
+  <div class="max-w-xl p-6 mx-auto text-center">
     <div class="font-bold text-3xl">Technical task</div>
     <div class="mt-4">
       <input

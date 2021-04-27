@@ -1,4 +1,4 @@
-import { createStore, createLogger } from 'vuex'
+import { createStore, createLogger } from "vuex"
 
 const store = createStore({
     state: {
@@ -26,7 +26,7 @@ const store = createStore({
             return state.answers
         }
     },
-    plugins: process.env.NODE_ENV !== 'production'
+    plugins: process.env.NODE_ENV !== "production"
         ? [createLogger()]
         : []
 })

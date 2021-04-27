@@ -1,11 +1,11 @@
 import { createWebHistory, createRouter } from "vue-router"
 
-import HomepageView from '../components/HomepageView/HomepageView'
-import QuizView from '../components/QuizView/QuizView'
-import ResultsView from '../components/ResultsView/ResultsView'
-import NotFoundView from '../components/NotFoundView/NotFoundView'
+import HomepageView from "../components/HomepageView/HomepageView"
+import QuizView from "../components/QuizView/QuizView"
+import ResultsView from "../components/ResultsView/ResultsView"
+import NotFoundView from "../components/NotFoundView/NotFoundView"
 
-import store from '../store/store'
+import store from "../store/store"
 
 
 const checkIfRegistered = (to, from, next) => {

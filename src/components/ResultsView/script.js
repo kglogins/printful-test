@@ -1,13 +1,13 @@
-import { mapState } from 'vuex'
+import { mapState } from "vuex"
 
 export default {
-    name: 'ResultView',
+    name: "ResultView",
     data: () => ({
         isLoading: true,
         results: null
     }),
     computed: {
-        ...mapState(['name', 'quizId', 'answers'])
+        ...mapState(["name", "quizId", "answers"])
     },
     async created() {
         const resultResponse = await this.$http.submit.submit(this.quizId, this.answers)

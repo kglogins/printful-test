@@ -45,6 +45,7 @@ export default {
             }
 
             this.$store.commit('registerUser', { name: this.name, id: this.selected.id })
+            this.$router.push({ name: 'quiz' })
         },
 
         formIsValid: function () {

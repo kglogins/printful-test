@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isLoading">Loading...</div>
+  <div v-if="isLoading"><Loading /></div>
   <div v-else class="text-center">
     <div class="font-bold text-3xl">Thanks, {{ name }}!</div>
     <div class="mt-6">

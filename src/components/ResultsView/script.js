@@ -1,7 +1,11 @@
 import { mapState } from "vuex"
+import Loading from "../Loading/Loading"
 
 export default {
     name: "ResultView",
+    components: {
+        Loading,
+    },
     data: () => ({
         isLoading: true,
         results: null

@@ -3,7 +3,7 @@
   <div v-else class="text-center">
     <div class="font-bold text-3xl">Thanks, {{ name }}!</div>
     <div class="mt-6">
-      You responded correctly to {{ results.correct }} from
+      You responded correctly to {{ results.correct }} out of
       {{ results.total }} questions.
     </div>
   </div>

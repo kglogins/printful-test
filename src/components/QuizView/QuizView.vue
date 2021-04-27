@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isLoading">Loading...</div>
+  <div v-if="isLoading"><Loading /></div>
   <div v-else class="max-w-xl p-6 mx-auto text-center">
     <div class="font-bold text-3xl">Question {{ currentQuestion + 1 }}</div>
     <div class="font-medium text-lg pt-4">

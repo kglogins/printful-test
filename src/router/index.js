@@ -32,6 +32,7 @@ const routes = [
         path: "/results",
         name: "results",
         component: ResultsView,
+        beforeEnter: checkIfRegistered,
     },
     {
         path: "/:catchAll(.*)",

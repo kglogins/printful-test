@@ -84,7 +84,7 @@
     </div>
     <div class="mt-4">
       <button
-        v-on:click="startQuiz()"
+        v-on:click="startQuiz"
         class="inline-flex justify-center py-2 px-4 shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-gray-300"
       >
         Start

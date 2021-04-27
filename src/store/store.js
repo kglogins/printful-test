@@ -11,6 +11,9 @@ const store = createStore({
             state.name = data.name
             state.quizId = data.id
         },
+        submitAnswers(state, answers) {
+            state.answers = answers
+        }
     },
     getters: {
         name(state) {

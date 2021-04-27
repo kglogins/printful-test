@@ -22,7 +22,10 @@
       class="mt-4"
     />
     <div v-if="error" class="mt-4 font-medium">Please select an answer</div>
-    <button @click="submitAnswer" class="py-2 px-4 mt-4 border rounded-md">
+    <button
+      @click="submitAnswer"
+      class="inline-flex justify-center py-2 px-4 shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-gray-300"
+    >
       Next
     </button>
   </div>

@@ -8,7 +8,7 @@
         name="name"
         v-model="name"
         id="name"
-        class="w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        class="w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-left cursor-default sm:text-sm"
         placeholder="Enter your name"
       />
     </div>
@@ -16,7 +16,7 @@
       <Listbox as="div" v-model="selected">
         <div class="mt-1 relative">
           <ListboxButton
-            class="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            class="relative w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-left cursor-default sm:text-sm"
           >
             <span class="flex items-center">
               <span class="block truncate">{{ selected.title }}</span>
@@ -45,7 +45,7 @@
               >
                 <li
                   :class="[
-                    active ? 'text-white bg-indigo-600' : 'text-gray-900',
+                    active ? 'text-white bg-gray-700' : 'text-gray-900',
                     'cursor-default select-none relative py-2 pl-3 pr-9',
                   ]"
                 >
@@ -63,7 +63,7 @@
                   <span
                     v-if="selected"
                     :class="[
-                      active ? 'text-white' : 'text-indigo-600',
+                      active ? 'text-white' : 'text-gray-700',
                       'absolute inset-y-0 right-0 flex items-center pr-4',
                     ]"
                   >
@@ -85,7 +85,7 @@
     <div class="mt-4">
       <button
         v-on:click="startQuiz()"
-        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        class="inline-flex justify-center py-2 px-4 shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-gray-300"
       >
         Start
       </button>

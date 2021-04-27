@@ -7,20 +7,13 @@ import NotFoundView from '../components/NotFoundView/NotFoundView'
 
 import store from '../store/store'
 
-const checkIfRegistered = (to, from, next) => {
 
-    // if (from.name === null && to.name !== 'Homepage') {
-    //     next({ name: 'Homepage' })
-    // } else {
-    //     next()
-    // }
-    if (store.name === undefined || store.quizId === undefined) {
-        console.log(store.name, store.quizId)
+const checkIfRegistered = (to, from, next) => {
+    if (store.getters.name === null || store.getters.quizId === null) {
         next({ name: "home" })
     } else {
         next()
     }
-
 }
 
 const routes = [

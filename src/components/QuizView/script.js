@@ -1,30 +1,44 @@
 import { mapState } from "vuex"
+import ProgressBar from "../ProgressBar/ProgressBar"
+import Loading from "../Loading/Loading"
 
 export default {
-    name: 'QuizView',
-    data: () => {
-        return {
-            questions: [],
-            answers: [],
-            currentQuestion: 0,
-            submittedAnswers: [],
-            isLoading: true
-        }
+    name: "QuizView",
+    components: {
+        Loading,
+        ProgressBar
     },
+    data: () => ({
+        isLoading: true,
+        questions: [],
+        answers: [],
+        currentQuestion: 0,
+        submittedAnswers: [],
+        selectedAnswer: null,
+        error: false
+    }),
     computed: {
-        ...mapState(['name', 'quizId'])
+        ...mapState(["name", "quizId"])
     },
     async created() {
         await this.getNextQuestionData()
     },
     methods: {
-        submitAnswer(id) {
-            this.submittedAnswers.push(id)
-            if (this.currentQuestion + 1 == this.questions.length()) {
-                console.log("ran out of questions")
-            } else {
-                this.currentQuestion++
+        submitAnswer() {
+            if (this.selectedAnswer === null) {
+                this.error = true
+                return
             }
+
+            this.isLoading = true
+            this.submittedAnswers.push(this.selectedAnswer)
+            if (this.currentQuestion + 1 == this.questions.length) {
+                this.$store.commit("submitAnswers", this.submittedAnswers)
+                this.$router.push({ name: "results" })
+                return
+            }
+
+            this.currentQuestion++
             this.getNextQuestionData()
         },
 
@@ -43,6 +57,11 @@ export default {
 
             console.log(answersResponse)
             this.isLoading = false
+        },
+
+        selectAnswer(id) {
+            this.selectedAnswer = id
+            this.error = false
         }
     },
 

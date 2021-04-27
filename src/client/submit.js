@@ -9,7 +9,7 @@ export default {
     submit(quizId, answers) {
         let url = `test-quiz.php?action=submit&quizId=${quizId}`
 
-        url = answers.map(answer => url + `&answers[]=${answer}`)
+        url = url + answers.map(answer => `&answers[]=${answer}`).join('')
 
         return API.get(url)
     }

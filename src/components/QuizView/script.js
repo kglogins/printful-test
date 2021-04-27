@@ -55,7 +55,7 @@ export default {
                 this.answers = answersResponse.data
             }
 
-            console.log(answersResponse)
+            this.selectedAnswer = null
             this.isLoading = false
         },
 

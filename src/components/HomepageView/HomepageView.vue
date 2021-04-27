@@ -1,5 +1,6 @@
 <template>
-  <div class="max-w-xl p-6 mx-auto text-center">
+  <div v-if="isLoading"><Loading /></div>
+  <div v-else class="text-center my-12">
     <div class="font-bold text-3xl">Technical task</div>
     <div class="mt-4">
       <input

@@ -9,7 +9,7 @@
       <div
         v-for="answer in answers"
         :key="answer.id"
-        class="p-6 rounded-md cursor-pointer"
+        class="p-6 rounded-md cursor-pointer hover:bg-gray-300 font-medium"
         :class="[selectedAnswer == answer.id ? 'bg-gray-300' : 'bg-gray-200']"
         @click="selectAnswer(answer.id)"
       >
@@ -24,7 +24,7 @@
     <div v-if="error" class="mt-4 font-medium">Please select an answer</div>
     <button
       @click="submitAnswer"
-      class="inline-flex justify-center py-2 px-4 shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-gray-300"
+      class="inline-flex justify-center mt-4 py-2 px-4 shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-gray-300"
     >
       Next
     </button>

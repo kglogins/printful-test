@@ -21,6 +21,12 @@ export default {
         ...mapState(["name", "quizId"])
     },
     async created() {
+        const questionsResponse = await this.$http.questions.getAll(this.quizId)
+
+        if (questionsResponse.status === 200) {
+            this.questions = questionsResponse.data
+        }
+
         await this.getNextQuestionData()
     },
     methods: {
@@ -43,12 +49,6 @@ export default {
         },
 
         async getNextQuestionData() {
-            const questionsResponse = await this.$http.questions.getAll(this.quizId)
-
-            if (questionsResponse.status === 200) {
-                this.questions = questionsResponse.data
-            }
-
             const answersResponse = await this.$http.answers.getAll(this.quizId, this.questions[this.currentQuestion].id)
 
             if (answersResponse.status === 200) {
